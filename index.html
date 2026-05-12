@@ -62,14 +62,9 @@ main{position:relative;z-index:5;max-width:1200px;margin:0 auto;padding:2.5rem 2
 .bs{background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;}
 .bf{background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;}
 .bv{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;}
-.cdiv{height:1px;background:var(--bd);margin-bottom:14px;}
-.cphone{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--tx2);margin-bottom:13px;}
-.cphone svg{color:var(--tx3);flex-shrink:0;}
 .cacts{display:flex;gap:8px;}
 .bwa{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;background:#25D366;color:#fff;border:none;border-radius:var(--rsm);height:40px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .18s,transform .12s;}
 .bwa:hover{background:#1aad53;transform:scale(1.02);}
-.bcopy{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--surf2);border:1px solid var(--bd2);border-radius:var(--rsm);cursor:pointer;color:var(--tx2);transition:background .18s,color .18s;flex-shrink:0;}
-.bcopy:hover{background:var(--gold-l);color:var(--gold-d);}
 
 .empty{text-align:center;padding:4rem 2rem;color:var(--tx2);grid-column:1/-1;}
 .empty .ei{font-size:46px;margin-bottom:14px;}
@@ -155,19 +150,11 @@ function render(){
           </div>
         </div>
         <div class="bdgs">${r.badges.map(bdgH).join('') || '<span style="font-size:12px;color:var(--tx3)">No badges</span>'}</div>
-        <div class="cdiv"></div>
-        <div class="cphone">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.82 19.79 19.79 0 01.01 3.2 2 2 0 012 1.07h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.21-1.21a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          ${esc(r.phone)}
-        </div>
         <div class="cacts">
           <a class="bwa" href="${wa}" target="_blank" rel="noopener">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.118 1.532 5.845L0 24l6.335-1.51A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.005-1.373l-.357-.213-3.758.896.938-3.658-.234-.376A9.818 9.818 0 1112 21.818z"/></svg>
             Chat on WhatsApp
           </a>
-          <button class="bcopy" onclick="cp('${esc(r.phone)}')" title="Copy number">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          </button>
         </div>
       </div>
     </div>`;
